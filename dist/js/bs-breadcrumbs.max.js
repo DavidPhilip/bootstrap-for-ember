@@ -1,5 +1,5 @@
 /*
-Breadcrumbs compponent.
+Breadcrumbs component.
 */
 
 
