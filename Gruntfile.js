@@ -330,8 +330,7 @@ module.exports = function (grunt) {
                 options: {
                     templateName: function(filename) {
                         return filename.substring(filename.lastIndexOf('/components/')+1,filename.length);
-                    },
-                    namespace: "Ember.TEMPLATES"
+                    }
                 },
                 files: {
                     '.tmp/scripts/bs-core.js': '<%= yeoman.app %>/templates/views/item-pane.hbs',
@@ -357,8 +356,7 @@ module.exports = function (grunt) {
                 options: {
                     templateName: function(filename) {
                         return filename.substring(filename.lastIndexOf('/showcase/')+1,filename.length).replace('showcase/', '');
-                    },
-                    namespace: "Ember.TEMPLATES"
+                    }
                 },
                 files: {
                     '.tmp/scripts/showcase-templates.js': '<%= yeoman.app %>/templates/showcase/**/*.hbs'
