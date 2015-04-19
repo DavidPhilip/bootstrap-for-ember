@@ -328,6 +328,9 @@ module.exports = function (grunt) {
         emberTemplates: {
             compile_components: {
                 options: {
+                    handlebarsPath: '../agilitybase-ember-cli/bower_components/handlebars/handlebars.js',
+                    templateCompilerPath: '../agilitybase-ember-cli/bower_components/ember/ember-template-compiler.js',
+                    templateNamespace: 'HTMLBars',
                     templateName: function(filename) {
                         return filename.substring(filename.lastIndexOf('/components/')+1,filename.length);
                     }
@@ -352,16 +355,19 @@ module.exports = function (grunt) {
                     '.tmp/scripts/bs-modal.js': '<%= yeoman.app %>/templates/components/bs-modal.hbs'
                 }
             },
-            compile_showcase: {
-                options: {
-                    templateName: function(filename) {
-                        return filename.substring(filename.lastIndexOf('/showcase/')+1,filename.length).replace('showcase/', '');
-                    }
-                },
-                files: {
-                    '.tmp/scripts/showcase-templates.js': '<%= yeoman.app %>/templates/showcase/**/*.hbs'
-                }
-            }
+            // compile_showcase: {
+            //     options: {
+            //         handlebarsPath: '../agilitybase-ember-cli/bower_components/handlebars/handlebars.js',
+            //         templateCompilerPath: '../agilitybase-ember-cli/bower_components/ember/ember-template-compiler.js',
+            //         templateNamespace: 'HTMLBars',
+            //         templateName: function(filename) {
+            //             return filename.substring(filename.lastIndexOf('/showcase/')+1,filename.length).replace('showcase/', '');
+            //         }
+            //     },
+            //     files: {
+            //         '.tmp/scripts/showcase-templates.js': '<%= yeoman.app %>/templates/showcase/**/*.hbs'
+            //     }
+            // }
         },
         markdown: {
             all: {
