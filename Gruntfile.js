@@ -37,9 +37,9 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
-            ember_templates: {
+            emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
-                tasks: ['ember_templates']
+                tasks: ['emberTemplates']
             },
             markdown: {
                 files: '<%= yeoman.app %>/templates/**/*.md',
@@ -309,7 +309,7 @@ module.exports = function (grunt) {
             server: [
                 'compass',
                 'markdown',
-                'ember_templates',
+                'emberTemplates',
                 'coffee:dist'
             ],
             test: [
@@ -318,14 +318,14 @@ module.exports = function (grunt) {
             dist: [
                 'coffee',
                 'markdown',
-                'ember_templates',
+                'emberTemplates',
                 'compass',
                 'imagemin',
                 'svgmin',
                 'htmlmin'
             ]
         },
-        ember_templates: {
+        emberTemplates: {
             compile_components: {
                 options: {
                     templateName: function(filename) {
