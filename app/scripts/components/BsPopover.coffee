@@ -384,7 +384,7 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
     if (typeof path is "string") and path isnt ""
       p = path.split(".")
       keyword = p[0]
-      o = options.data.keywords[keyword]
+      o = options.data.view.getStream(keyword).value()
       if o
         p.removeAt 0
         p.insertAt 0, "this"
@@ -410,7 +410,7 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
           #get context from keywords -> the each helper defines it
           p = value.split(".")
           keyword = p[0]
-          o = options.data.keywords[keyword]
+          o = options.data.view.getStream(keyword).value()
           unless o
 
             #no context in keywords, assuming current context
