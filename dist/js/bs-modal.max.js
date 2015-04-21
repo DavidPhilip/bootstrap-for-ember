@@ -622,6 +622,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
       var morph3 = dom.createMorphAt(element5,1,1);
       var morph4 = dom.createMorphAt(element5,2,2);
       element(env, element3, context, "bind-attr", [], {"class": ":close allowClose::hide"});
+      element(env, element3, context, "action", ["hide"], {});
       block(env, morph0, context, "if", [get(env, context, "titleIconClasses")], {}, child0, null);
       content(env, morph1, context, "title");
       block(env, morph2, context, "if", [get(env, context, "body")], {}, child1, child2);
